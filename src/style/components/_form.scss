@@ -1,0 +1,25 @@
+.form {
+  &__item {
+    margin: 16px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px 0;
+    text-align: center;
+    font-size: 60px;
+    background: $primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    position: relative;
+    user-select: none;
+  }
+}

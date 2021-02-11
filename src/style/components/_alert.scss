@@ -1,0 +1,13 @@
+.alert {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  border-radius: $border-radius;
+  background-color: $gray;
+
+  &--error {
+    background-color: #fff;
+    border: $control-border-width solid $error;
+    color: $error;
+  }
+}

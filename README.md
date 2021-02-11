@@ -1,3 +1,22 @@
+# Moje rozwiązanie
+
+Podgląd: http://lubudu.wojciechkrakowiak.com/
+
+Co udało mi się zrobić:
+* Logowanie z zapisywaniem tokena w localStorage (użytkownik zalogowany jest automatycznie przekierowywany na stronę success, a niezalogowany na stronę logowania)
+* Interfejs jest wyposażony w czytelne dla użytkownika informację błędu oraz animację ładowania na przycisku. 
+* Kod zaktualizowany do nowszych standardów, oparty o TypeScript, z uporządkowanym modelem aplikacji, co zdecydowanie ułatwi pracę przy skalowaniu
+* Dodanie możliwości ustawienia tytułu strony w kontrolerze (z myślą o dodaniu kolejnych pól SEO)
+* Style w SCSS ze wstępnie uporządkowanymi zmiennymi i komponentami (ale dałoby się to zrobić jeszcze lepiej). Zaimplementowane są media queries i zalążek responsywności.
+* Ikony jako SVG sprite (importowanie w js tylko potrzebnych ikon, nieużywane ikony nie obciążają strony)
+* Rozbudowanie webpacka (dodanie opcji budowania z ukrytą mapą źródeł), dodanie eslinta i prettiera.
+
+Co bym zrobił w dalszej kolejności:
+* Dynamiczne ładowanie templatek (obecnie wielkość bundla szybko rośnie)
+* Wydzielenie komponentów funkcyjnych (funkcje przyjmujące propsy i zwracające stringi z buttonem, inputem)
+* Implementacja kolejnych zmienny związanych z SEO (w parametrze kontrolera "head")
+* Przebudowałbym odświeżanie szablonu, aby nie było konieczne renderowanie całości przy każdym wywołaniu $refresh
+
 # zadanie
 
 Cześć!  
@@ -5,15 +24,15 @@ Do stworzenia jest prosta aplikacja w oparciu o mini-framework `PureJS`. Aplikac
 1. Home - prosty formularz z polami `username` i `password`, przycisk `submit`.
 2. Success - strona powitalna z informacją o udanej akcji.
 
-Po przesłaniu formularza aplikacja powinna przekierować do strony success lub wyświetlić informację o błędzie.
+Po przesłaniu formularza aplikacja powinna przekierować do strony successController lub wyświetlić informację o błędzie.
 
 ##### Część zaawansowana
-Zmodyfikuj projekt w taki sposób, aby każda templatka była w osobnym pliku. To zadanie wymaga trochę kreatywności, być może trzeba będzie rozbudować konfigurację webpack'a, być może zmodyfikować logikę `engine.js` lub `router.js`. Wszystkie chwyty dozwolone. Cel jest taki, aby templatki były tworzone poza `index.html`.
+Zmodyfikuj projekt w taki sposób, aby każda templatka była w osobnym pliku. To zadanie wymaga trochę kreatywności, być może trzeba będzie rozbudować konfigurację webpack'a, być może zmodyfikować logikę `engine.ts` lub `router.ts`. Wszystkie chwyty dozwolone. Cel jest taki, aby templatki były tworzone poza `index.html`.
 
 ##### Rozwiązanie
 Na rozwiązanie składa się:
 - link do repozytorium
-- screenshot widoku home
+- screenshot widoku homeController
 
 Oceniamy:
 - działające rozwiązanie
@@ -23,8 +42,8 @@ Oceniamy:
 ## Dokumentacja PureJS
 
 Framework składa się z dwóch części
-1. `engine.js` - silnik templatek
-2. `router.js` - router i logika kontrolerów
+1. `engine.ts` - silnik templatek
+2. `router.ts` - router i logika kontrolerów
 
 ##### Dodawanie widoków
 
@@ -59,7 +78,7 @@ POST https://zwzt-zadanie.netlify.app/api/login
 *Example response*
 ```
 {
-  message: 'Login success!',
+  message: 'Login successController!',
   token: 'eyJhbGciOiJIUz...'
 }
 ```

@@ -1,0 +1,21 @@
+<div class="container">
+    <form id="loginForm" class="form widget">
+        <h1 class="form__title">
+           <i><%= title %></i>
+        </h1>
+        <div class="form__item input__wrapper">
+            <%= usernameIcon %>
+            <input id="username" placeholder="<%= username %>" type="text" name="username" class="input input--icon" />
+        </div>
+        <div class="form__item input__wrapper">
+            <%= passwordIcon %>
+            <input id="password" placeholder="<%= password %>" type="password" name="password" class="input input--icon" />
+        </div>
+        <div class="form__item">
+            <button id="submitButton" type="submit" class="button button--block button--primary"><%= submit %></button>
+        </div>
+        <% if (error) { %>
+            <div class="alert alert--error"><%= error %></div>
+        <% } %>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+// media breakpoints
+
+$media-breakpoints: (
+  'small': (
+    min-width: 640px,
+  ),
+  'medium': (
+    min-width: 992px,
+  ),
+  'large': (
+    min-width: 1200px,
+  ),
+);
+
+// colors
+
+$primary: rgb(37, 200, 208);
+$primary-gradient: linear-gradient(180deg, rgba(17, 217, 190, 1) 0%, $primary 100%);
+$gray: #ddd;
+$gray--dark: #aaa;
+$error: #f88;
+
+// properties
+
+$control-font-size: 16px;
+$control-height: 48px;
+$control-padding: 8px 12px;
+$control-border-width: 2px;
+
+$border-radius: 10px;

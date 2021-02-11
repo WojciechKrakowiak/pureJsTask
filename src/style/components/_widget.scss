@@ -1,0 +1,11 @@
+.widget {
+  padding: 42px;
+  background-color: #fff;
+
+  @include media('small') {
+    width: 360px;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 0 32px 172px darken(rgba(37, 200, 208, 0.2), 10%);
+  }
+}
